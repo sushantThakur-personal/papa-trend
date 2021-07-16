@@ -1,11 +1,12 @@
 import React from "react";
+import GraphSection from "./components/GraphSection";
 
-const App = (props) => {
-    return (
-        <div>
-
-        </div>
-    );
+const App = async (props) => {
+  return (
+    <div>
+      <GraphSection />
+    </div>
+  );
 };
 
 export default App;
