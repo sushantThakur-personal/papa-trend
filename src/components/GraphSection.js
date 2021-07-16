@@ -1,5 +1,4 @@
 import React from "react";
-
 import { getMetricsByPageName } from "../tools/crudJson";
 
 class GraphSection extends React.Component {
@@ -10,25 +9,29 @@ class GraphSection extends React.Component {
     };
   }
   componentDidMount() {
-    let resp = await getMetricsByPageName("https://www.google.com");
+    this.renderData();
+  }
+  renderData = async () => {
+    console.log("state updated");
+    const resp = await getMetricsByPageName("https://www.google.com");
+
     this.setState = {
       metricList: resp,
     };
-  }
-  mapResponse = () => {
-    return this.state.metricList.map(({ id, url, blogCreator }) => {
-      return (
-        <div key={id}>
-          <div>{id}</div>
-          <div>{url}</div>
-          <div>{blogCreator}</div>
-        </div>
-      );
-    });
   };
 
   render() {
-    return <div>{this.mapResponse()}</div>;
+    console.log(this.state.metricList);
+    const dataPoint = this.state.metricList?.map(({ id, url, blogCreator }) => {
+      return (
+        <div key={id}>
+          <p>{id}</p>
+          <p>{url}</p>
+          <p>{blogCreator}</p>
+        </div>
+      );
+    });
+    return <div>{dataPoint}</div>;
   }
 }
 export default GraphSection;

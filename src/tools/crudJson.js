@@ -1,7 +1,9 @@
 import jsonDbApi from "../api/jsonDbApi";
 
 export const getMetricsByPageName = async (formValues) => {
-  const response = await jsonDbApi.get(`/metrics?url=${formValues}`);
-  return await response.data;
+  const response = await (
+    await jsonDbApi.get(`/metrics?url=${formValues}`)
+  ).data;
+  return response;
 };
 // { ...response, [response.data.id]: response.data }
