@@ -6,4 +6,3 @@ export const getMetricsByPageName = async (formValues) => {
   ).data;
   return response;
 };
-// { ...response, [response.data.id]: response.data }

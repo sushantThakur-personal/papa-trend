@@ -1,7 +1,8 @@
 import React from "react";
 import GraphSection from "./components/GraphSection";
+// import Selection from "./components/Selection";
 
-const App = async (props) => {
+const App = (props) => {
   return (
     <div>
       <GraphSection />
