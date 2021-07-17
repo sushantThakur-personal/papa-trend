@@ -1,5 +1,6 @@
 import React from "react";
-import { getMetricsByPageName } from "../tools/crudJson";
+import axios from "axios";
+// import { getMetricsByPageName } from "../tools/crudJson";
 
 class GraphSection extends React.Component {
   constructor(props) {
@@ -9,14 +10,18 @@ class GraphSection extends React.Component {
     };
   }
   componentDidMount() {
-    this.renderData();
+    this.renderData("https://www.google.com");
   }
-  renderData = async () => {
+  renderData = async (formValues) => {
     console.log("state updated");
-    const resp = await getMetricsByPageName("https://www.google.com");
+    // const resp = await getMetricsByPageName("https://www.google.com");
+    const metrics = await axios
+      .get(`/metrics?url=${formValues}`)
+      .then((Response) => Response.data)
+      .catch((err) => console.log(err));
 
     this.setState = {
-      metricList: resp,
+      metricList: metrics,
     };
   };
 
