@@ -1,5 +1,5 @@
 import React from "react";
-import { getMetricsByPageName } from "../tools/crudJson";
+import getMetricsByPageName from "../tools/crudJson";
 
 class GraphSection extends React.Component {
   constructor(props) {

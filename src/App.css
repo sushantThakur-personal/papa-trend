@@ -1,0 +1,15 @@
+*,html{
+ padding:0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+
+#date_selector{
+    display: flex;
+    justify-content: center;
+}
+
+.date-selector{
+    padding :2px;
+}
