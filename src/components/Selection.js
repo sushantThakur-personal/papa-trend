@@ -25,18 +25,18 @@ class Selection extends React.Component {
     })
   }
 
+  sendDateRange = () => {
+    this.props.dateRange(this.state);
+  }
+
 
   render() {
-
-    // console.log(this.state.startDate);
-    // console.log(this.state.endDate);
     return <div>
       <h1 className="title">Core Web Vital Trends</h1>
       <div >
         <DateSelection startDate={this.getStartDate} endDate={this.getEndDate}></DateSelection>
-
+        <button onClick={this.sendDateRange}>FILTER</button>
       </div>
-
     </div>;
   }
 }
