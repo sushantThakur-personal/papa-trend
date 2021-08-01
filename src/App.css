@@ -4,6 +4,16 @@
  box-sizing: border-box;
 }
 
+body{
+    width: 100% !important;
+    height: 100% !important;
+    
+    background: #4e54c8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
 
 #date_selector{
     display: flex;
@@ -13,4 +23,61 @@
 
 .date-selector{
     padding :2px;
+}
+
+.selection_sub{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+
+}
+
+.selection_area{
+    /* border: 2px solid black; */
+    margin-top: 150px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 15px;
+    /* box-shadow: 10px 10px 20px 10px #e6dfdf; */
+    -webkit-box-shadow: 0 0 10px rgba(102, 88, 88, 0.575);
+        box-shadow: 0 0 10px rgba(153, 139, 139, 0.514);
+
+    
+}
+
+/* input[type="date"] {
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+    font-family: monospace;
+    overflow: hidden;
+    padding: 0;
+    align-items: center;
+    -webkit-padding-start: 2px;
+    
+ } */
+
+input[type="date"]::-webkit-datetime-edit{
+    padding: .5rem;
+    /* border-radius: 10px; */
+}
+
+input[type=time]::-webkit-datetime-edit-hour-field {
+    background-color: #949b9e;
+    border-radius: 15%;
+    padding: 19px 13px;
+  }
+
+
+/* ::-webkit-datetime-edit
+::-webkit-datetime-edit-fields-wrapper
+::-webkit-datetime-edit-text
+::-webkit-datetime-edit-month-field
+::-webkit-datetime-edit-day-field
+::-webkit-datetime-edit-year-field
+::-webkit-inner-spin-button
+::-webkit-calendar-picker-indicator */
+
+#submit-button{
+    background-color: #4e54c8;
+    color: white;
 }

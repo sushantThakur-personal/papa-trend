@@ -6,8 +6,7 @@ import './App.css';
 
 const App = (props) => {
   return (
-    <div>
-
+    <div className="main-div">
       <GraphSection />
     </div>
   );

@@ -40,9 +40,9 @@ class GraphSection extends React.Component {
   render() {
 
     return (
-      <div>
+      <div class="selection_area">
         <Selection dateRange={this.getDateRange} />
-        {this.dataPoint}
+        {/* {this.dataPoint} */}
       </div>
     );
   }

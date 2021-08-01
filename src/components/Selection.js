@@ -2,7 +2,6 @@ import React from "react";
 import DateSelection from "./DateSelector";
 
 
-
 class Selection extends React.Component {
   constructor(props) {
     super(props);
@@ -31,12 +30,12 @@ class Selection extends React.Component {
 
 
   render() {
-    return <div>
-      <h1 className="title">Core Web Vital Trends</h1>
-      <div >
-        <DateSelection startDate={this.getStartDate} endDate={this.getEndDate}></DateSelection>
-        <button onClick={this.sendDateRange}>FILTER</button>
-      </div>
+    return <div class="selection_sub">
+      {/* <h1 className="title">Core Web Vital Trends</h1> */}
+
+      <DateSelection startDate={this.getStartDate} endDate={this.getEndDate}></DateSelection>
+      <button id="submit-button" onClick={this.sendDateRange}>FILTER</button>
+
     </div>;
   }
 }
